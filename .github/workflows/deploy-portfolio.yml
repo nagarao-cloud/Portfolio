@@ -47,7 +47,7 @@ jobs:
 
       - name: Build
         working-directory: ./Portfolio
-        run: npm run build -- --base-href /FrontEnd/Portfolio/
+        run: npm run build -- --base-href /FrontEnd/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -91,5 +91,5 @@ jobs:
         if: success()
         run: |
           echo "::notice::✅ Portfolio deployed successfully!"
-          echo "::notice::Your site: https://nagarao-cloud.github.io/FrontEnd/Portfolio/"
+          echo "::notice::Your site: https://nagarao-cloud.github.io/FrontEnd/"
 

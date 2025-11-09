@@ -48,7 +48,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/FrontEnd/Portfolio/"
+              "baseHref": "/FrontEnd/"
             },
             "development": {
               "optimization": false,
