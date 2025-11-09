@@ -2,8 +2,8 @@
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-image-container">
-        <img src="assets/profile-photo.jpg" alt="Professional Photo" class="hero-image" 
-             onerror="this.src='https://via.placeholder.com/300x300?text=Professional+Photo'">
+        <img [src]="profileImageSrc" alt="Professional Photo" class="hero-image" 
+             (error)="onImageError()">
       </div>
       <div class="hero-text">
         <h1 class="hero-headline">{{ headline }}</h1>
