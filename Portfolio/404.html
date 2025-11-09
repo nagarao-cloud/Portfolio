@@ -5,12 +5,20 @@
   <title>Portfolio</title>
   <script>
     // Single Page Apps for GitHub Pages
-    // https://github.com/rafgraph/spa-github-pages
-    var pathSegmentsToKeep = 1;
+    // Redirects to the correct base path
+    var pathSegmentsToKeep = 2; // Keep /FrontEnd/Portfolio
     var l = window.location;
+    var basePath = '/FrontEnd/Portfolio';
+    
+    // If we're at the root, redirect to the base path
+    if (l.pathname === '/' || l.pathname === '/FrontEnd/' || l.pathname === '/FrontEnd') {
+      l.replace(basePath + '/');
+      return;
+    }
+    
+    // Otherwise, handle SPA routing
     l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      basePath + '/?/' +
       l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
       (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
       l.hash
@@ -18,6 +26,6 @@
   </script>
 </head>
 <body>
+  <p>Redirecting...</p>
 </body>
 </html>
-

@@ -47,7 +47,7 @@ jobs:
 
       - name: Build
         working-directory: ./Portfolio
-        run: npm run build -- --base-href /Portfolio/
+        run: npm run build -- --base-href /FrontEnd/Portfolio/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
