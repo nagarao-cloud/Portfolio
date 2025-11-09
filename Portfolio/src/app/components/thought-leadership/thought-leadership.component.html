@@ -1,0 +1,23 @@
+<section class="thought-leadership" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">💡 Thought Leadership Blog</h2>
+      <p class="section-subtitle">Strategic insights on technology, leadership, and innovation</p>
+    </div>
+    
+    <div class="blog-grid">
+      <article class="blog-card" *ngFor="let post of blogPosts">
+        <div class="blog-header">
+          <h3 class="blog-title">{{ post.title }}</h3>
+          <span class="read-time">{{ post.readTime }}</span>
+        </div>
+        <p class="blog-description">{{ post.description }}</p>
+        <div class="blog-topics">
+          <span class="topic-tag" *ngFor="let topic of post.topics">{{ topic }}</span>
+        </div>
+        <a [href]="post.link" class="read-more">Read Article →</a>
+      </article>
+    </div>
+  </div>
+</section>
+

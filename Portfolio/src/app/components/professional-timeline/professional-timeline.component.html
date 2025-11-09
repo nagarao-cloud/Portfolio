@@ -1,0 +1,23 @@
+<section class="professional-timeline" id="timeline">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">📅 Professional Timeline</h2>
+      <p class="section-subtitle">Career growth, certifications, and achievements</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let event of timelineEvents" 
+           [style.--event-color]="getEventColor(event.type)">
+        <div class="timeline-marker" [style.background-color]="getEventColor(event.type)">
+          <span class="timeline-icon">{{ getEventIcon(event.type) }}</span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-year">{{ event.year }}</div>
+          <h3 class="timeline-title">{{ event.title }}</h3>
+          <p class="timeline-description">{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

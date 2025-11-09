@@ -1,0 +1,41 @@
+<section class="leadership-impact" id="leadership">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">🧭 Leadership & Impact</h2>
+      <p class="section-subtitle">Bridging technical expertise with leadership aspirations</p>
+    </div>
+    
+    <div class="leadership-content">
+      <div class="philosophy-section">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">🧭</div>
+          <h3 class="philosophy-title">Leadership Philosophy</h3>
+          <p class="philosophy-text">{{ philosophy }}</p>
+        </div>
+      </div>
+      
+      <div class="impact-grid">
+        <div class="impact-category">
+          <h3 class="category-title">🧩 Team Impact Stories</h3>
+          <div class="story-list">
+            <div class="story-card" *ngFor="let story of impactStories">
+              <h4 class="story-title">{{ story.title }}</h4>
+              <p class="story-description">{{ story.description }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="impact-category">
+          <h3 class="category-title">🛠️ Process & Portfolio Management</h3>
+          <div class="story-list">
+            <div class="story-card" *ngFor="let story of processStories">
+              <h4 class="story-title">{{ story.title }}</h4>
+              <p class="story-description">{{ story.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,55 @@
+<section class="contact-connect" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">📧 Contact & Connect</h2>
+      <p class="section-subtitle">Let's collaborate on AI or Data Projects</p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3 class="contact-label">Email</h3>
+          <a [href]="'mailto:' + email" class="contact-value">{{ email }}</a>
+        </div>
+        
+        <div class="contact-card" (click)="onGitHubClick()">
+          <div class="contact-icon">💻</div>
+          <h3 class="contact-label">GitHub</h3>
+          <p class="contact-value">View my repositories</p>
+          <div class="github-stats">
+            <div class="stat-item">
+              <span class="stat-label">Repositories</span>
+              <span class="stat-value">50+</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Contributions</span>
+              <span class="stat-value">1,200+</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Stars</span>
+              <span class="stat-value">300+</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-card" (click)="onLinkedInClick()">
+          <div class="contact-icon">💼</div>
+          <h3 class="contact-label">LinkedIn</h3>
+          <p class="contact-value">Connect professionally</p>
+        </div>
+      </div>
+      
+      <div class="cta-section">
+        <div class="cta-card">
+          <h3 class="cta-title">Ready to Collaborate?</h3>
+          <p class="cta-description">I'm always interested in discussing AI automation, data engineering, or fullstack development projects.</p>
+          <button class="btn-cta" (click)="onCollaborateClick()">
+            Collaborate on AI or Data Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
