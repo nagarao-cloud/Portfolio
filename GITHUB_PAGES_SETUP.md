@@ -8,7 +8,7 @@ Before the deployment workflow can run, you **MUST** enable GitHub Pages in your
 
 ### Step 1: Navigate to Repository Settings
 
-1. Go to your repository: **https://github.com/nagarao-cloud/FrontEnd**
+1. Go to your repository: **https://github.com/nagarao-cloud/Portfolio**
 2. Click on the **"Settings"** tab (located in the top menu bar of your repository)
 
 ### Step 2: Enable GitHub Pages
@@ -53,7 +53,7 @@ After enabling GitHub Pages:
 
 After successful deployment:
 - Go to **Settings → Pages**
-- You'll see your site URL: **https://nagarao-cloud.github.io/FrontEnd/Portfolio/**
+- You'll see your site URL: **https://nagarao-cloud.github.io/Portfolio/**
 - Click the link to view your portfolio!
 
 ## Troubleshooting
@@ -88,7 +88,5 @@ After successful deployment:
 ## Your Portfolio URL
 
 Once deployed, your portfolio will be available at:
-**https://nagarao-cloud.github.io/FrontEnd/Portfolio/**
-
-Note: The `/Portfolio/` path is because your Portfolio folder is inside the FrontEnd repository.
+**https://nagarao-cloud.github.io/Portfolio/**
 

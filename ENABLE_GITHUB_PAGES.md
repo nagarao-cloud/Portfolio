@@ -13,7 +13,7 @@ This error means **GitHub Pages is NOT enabled** in your repository settings.
 
 ### Step 1: Open Your Repository Settings
 
-1. Go to: **https://github.com/nagarao-cloud/FrontEnd**
+1. Go to: **https://github.com/nagarao-cloud/Portfolio**
 2. Click on the **"Settings"** tab (it's in the top menu, next to "Code", "Issues", etc.)
 
 ### Step 2: Navigate to Pages Settings
@@ -84,7 +84,7 @@ Before running the workflow, verify:
 ## 🔍 How to Verify Pages is Enabled
 
 After Step 3, go to:
-**https://github.com/nagarao-cloud/FrontEnd/settings/pages**
+**https://github.com/nagarao-cloud/Portfolio/settings/pages**
 
 You should see:
 - ✅ Source: **GitHub Actions** (not "None" or "Deploy from a branch")
@@ -109,7 +109,7 @@ If you've completed all steps and still get the error:
 ## 🎯 Your Portfolio URL (After Deployment)
 
 Once everything is set up correctly, your portfolio will be at:
-**https://nagarao-cloud.github.io/FrontEnd/Portfolio/**
+**https://nagarao-cloud.github.io/Portfolio/**
 
 ---
 

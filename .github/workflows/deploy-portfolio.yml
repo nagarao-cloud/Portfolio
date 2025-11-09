@@ -47,7 +47,7 @@ jobs:
 
       - name: Build
         working-directory: ./Portfolio
-        run: npm run build -- --base-href /FrontEnd/
+        run: npm run build -- --base-href /Portfolio/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -66,7 +66,7 @@ jobs:
             echo "enabled=false" >> $GITHUB_OUTPUT
             echo "::error::GitHub Pages is not properly configured!"
             echo "::error::Please follow these steps:"
-            echo "::error::1. Go to: https://github.com/nagarao-cloud/FrontEnd/settings/pages"
+            echo "::error::1. Go to: https://github.com/nagarao-cloud/Portfolio/settings/pages"
             echo "::error::2. Under 'Source', select 'GitHub Actions' (NOT 'Deploy from a branch')"
             echo "::error::3. Click 'Save'"
             echo "::error::4. Verify repository is PUBLIC (Settings → scroll to bottom → Danger Zone)"
@@ -91,5 +91,5 @@ jobs:
         if: success()
         run: |
           echo "::notice::✅ Portfolio deployed successfully!"
-          echo "::notice::Your site: https://nagarao-cloud.github.io/FrontEnd/"
+          echo "::notice::Your site: https://nagarao-cloud.github.io/Portfolio/"
 
