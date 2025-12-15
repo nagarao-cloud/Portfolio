@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-102 Memory Castle Map</title>
+    <style>
+        :root {
+            --wall-color: #2c3e50;
+            --bg-color: #ecf0f1;
+            --text-color: #2c3e50;
+            --accent-gold: #f1c40f;
+            --room-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { text-align: center; color: var(--wall-color); }
+        .castle-container {
+            display: grid;
+            grid-template-areas:
+                "observatory observatory observatory"
+                "office office office"
+                "gallery living library"
+                "gallery basement library"
+                "gate gate gate";
+            gap: 15px;
+            max-width: 800px;
+            width: 100%;
+            background: var(--wall-color);
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        /* Roof decoration */
+        .castle-container::before {
+            content: '';
+            position: absolute;
+            top: -30px; left: 20px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid var(--wall-color);
+        }
+        .castle-container::after {
+            content: '';
+            position: absolute;
+            top: -30px; right: 20px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid var(--wall-color);
+        }
+
+        .room {
+            background: var(--room-bg);
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #bdc3c7;
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .room:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .room-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 5px;
+        }
+        .room-content {
+            font-size: 0.9em;
+        }
+        ul { padding-left: 20px; margin: 5px 0; }
+
+        /* Specific Areas */
+        .observatory { grid-area: observatory; background: #e8f6f3; }
+        .office { grid-area: office; background: #fef9e7; }
+        .gallery { grid-area: gallery; background: #fdedec; }
+        .library { grid-area: library; background: #eaf2f8; }
+        .living { grid-area: living; background: #f4f6f7; }
+        .basement { grid-area: basement; background: #ebedef; border-style: dashed; }
+        .gate { 
+            grid-area: gate; 
+            background: #fae5d3; 
+            border: 4px solid #d35400;
+            text-align: center;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🏰 The AI-102 Memory Castle</h1>
+    <p>Visualize walking through these rooms to recall your exam topics.</p>
+
+    <div class="castle-container">
+        
+        <!-- Domain 7 -->
+        <div class="room observatory">
+            <div class="room-title">🔭 The Observatory (OpenAI)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Telescope:</strong> Generative AI models</li>
+                    <li><strong>Storyteller:</strong> GPT-3.5/4 (Completion)</li>
+                    <li><strong>Artist:</strong> DALL-E (Images)</li>
+                    <li><strong>Temp Dial:</strong> Randomness (0=Focus, 1=Creative)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 6 -->
+        <div class="room office">
+            <div class="room-title">📝 The Office (Doc Intelligence)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Accountant:</strong> Prebuilt Receipt/Invoice models</li>
+                    <li><strong>Layout Wizard:</strong> Extracts tables & structure</li>
+                    <li><strong>Custom Desk:</strong> Custom Neural Models</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 3 -->
+        <div class="room gallery">
+            <div class="room-title">🖼️ Art Gallery (Vision)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Face Robot:</strong> Identity & Emotion</li>
+                    <li><strong>"What is it?" Machine:</strong> Object Detection</li>
+                    <li><strong>OCR Goblin:</strong> Reads text in images</li>
+                    <li><strong>Video Room:</strong> Video Indexer</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 2 -->
+        <div class="room living">
+            <div class="room-title">🛋️ Living Room (Safety)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Magic Mirror:</strong> Content Safety</li>
+                    <li><strong>H.S.V.S. Block:</strong> Hate, Self-harm, Violence, Sexual</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 4 -->
+        <div class="room library">
+            <div class="room-title">📚 Library (Language)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Parrot:</strong> Translator</li>
+                    <li><strong>Mind Reader:</strong> CLU (Intents/Entities)</li>
+                    <li><strong>Thermometer:</strong> Sentiment Analysis</li>
+                    <li><strong>Microphone:</strong> Speech Services</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 5 -->
+        <div class="room basement">
+            <div class="room-title">🔎 Basement (Search)</div>
+            <div class="room-content">
+                <ul>
+                    <li><strong>Spiders:</strong> Indexers (Crawling data)</li>
+                    <li><strong>Backpacks:</strong> Skillsets (Enrichment)</li>
+                    <li><strong>Catalog:</strong> The Search Index</li>
+                    <li><strong>Fuzzy Torch:</strong> Typos/Misspellings</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Domain 1 -->
+        <div class="room gate">
+            <div class="room-title" style="justify-content: center;">📍 The Front Gate (Plan & Manage)</div>
+            <div class="room-content">
+                <strong>Keys:</strong> Auth & Security | <strong>Ledger:</strong> Costs | <strong>Shield:</strong> VNETs/Private Links
+                <br>
+                <em>"Only those with the Key or from the Village (VNET) may enter."</em>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="note">
+        <strong>How to use:</strong> Open this file in your browser. Start at the Gate (bottom) and work your way up to the Observatory (top).
+    </div>
+
+</body>
+</html>
